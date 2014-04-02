@@ -1,0 +1,22 @@
+{
+    "name": "2amigos/yii2-date-picker-widget",
+    "description": "Bootstrap DatePicker widget for Yii2.",
+    "keywords": ["yii", "extension", "widget", "datepicker"],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Antonio Ramirez",
+            "email": "ramirez.cobos@gmail.com",
+            "homepage": "http://2amigos.us"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "dosamigos\\datepicker\\": ""
+        }
+    }
+}
