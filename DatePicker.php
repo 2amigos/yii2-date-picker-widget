@@ -44,7 +44,7 @@ class DatePicker extends InputWidget
         parent::init();
 
         if ($this->inline) {
-            $this->options['onfocus'] = 'javascript:this.blur()';
+            $this->options['readonly'] = 'readonly';
             Html::addCssClass($this->options, 'text-center');
         }
         if ($this->size) {
