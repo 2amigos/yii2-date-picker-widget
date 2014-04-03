@@ -89,6 +89,7 @@ class DatePicker extends InputWidget
         $view = $this->getView();
 
         if ($this->language !== null) {
+            $this->clientOptions['language'] = $this->language;
             DatePickerAsset::register($view)->js[] = 'js/locales/bootstrap-datepicker.' . $this->language . '.js';
         } else {
             DatePickerAsset::register($view);
