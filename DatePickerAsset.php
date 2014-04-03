@@ -7,11 +7,14 @@
 namespace dosamigos\datepicker;
 
 use yii\web\AssetBundle;
+
 /**
+ * DatePickerAsset
+ *
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @link http://www.ramirezcobos.com/
  * @link http://www.2amigos.us/
- * @package dosamigos\yii2\widgets
+ * @package dosamigos\datepicker
  */
 class DatePickerAsset extends AssetBundle
 {

@@ -9,10 +9,12 @@ namespace dosamigos\datepicker;
 use yii\web\AssetBundle;
 
 /**
+ * DateRangePickerAsset
+ *
  * @author Antonio Ramirez <amigo.cobos@gmail.com>
  * @link http://www.ramirezcobos.com/
  * @link http://www.2amigos.us/
- * @package dosamigos\yii2\widgets
+ * @package dosamigos\datepicker
  */
 class DateRangePickerAsset extends AssetBundle
 {
