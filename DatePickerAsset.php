@@ -15,7 +15,7 @@ use yii\web\AssetBundle;
  */
 class DatePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@common/extensions/widgets/datepicker/assets';
+    public $sourcePath = '@vendor/2amigos/yii2-date-picker-widget/assets';
 
     public $css = [
         'css/datepicker.css'
