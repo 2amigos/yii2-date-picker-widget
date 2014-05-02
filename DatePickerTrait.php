@@ -26,7 +26,7 @@ trait DatePickerTrait {
      */
     public $clientOptions = [];
     /**
-     * @var array the event handlers for the underlying Bootstrap Switch 3 input JS plugin.
+     * @var array the event handlers for the underlying Bootstrap DatePicker plugin.
      * Please refer to the [DatePicker](http://bootstrap-datepicker.readthedocs.org/en/release/events.html) plugin
      * Web page for possible events.
      */
