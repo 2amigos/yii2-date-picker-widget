@@ -1,12 +1,12 @@
 Bootstrap DatePicker Widget for Yii2
 ====================================
 
-[![Latest Version](https://img.shields.io/github/tag/2amigos/yii2-datepicker-widget.svg?style=flat-square&label=release)](https://github.com/2amigos/yii2-datepicker-widget/tags)
+[![Latest Version](https://img.shields.io/github/tag/2amigos/yii2-date-picker-widget.svg?style=flat-square&label=release)](https://github.com/2amigos/yii2-date-picker-widget/tags)
 [![Software License](https://img.shields.io/badge/license-BSD-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/2amigos/yii2-datepicker-widget/master.svg?style=flat-square)](https://travis-ci.org/2amigos/yii2-datepicker-widget)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/2amigos/yii2-datepicker-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/2amigos/yii2-datepicker-widget/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/2amigos/yii2-datepicker-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/2amigos/yii2-datepicker-widget)
-[![Total Downloads](https://img.shields.io/packagist/dt/2amigos/yii2-datepicker-widget.svg?style=flat-square)](https://packagist.org/packages/2amigos/yii2-datepicker-widget)
+[![Build Status](https://img.shields.io/travis/2amigos/yii2-date-picker-widget/master.svg?style=flat-square)](https://travis-ci.org/2amigos/yii2-date-picker-widget)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/2amigos/yii2-date-picker-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/2amigos/yii2-date-picker-widget/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/2amigos/yii2-date-picker-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/2amigos/yii2-date-picker-widget)
+[![Total Downloads](https://img.shields.io/packagist/dt/2amigos/yii2-date-picker-widget.svg?style=flat-square)](https://packagist.org/packages/2amigos/yii2-date-picker-widget)
 
 
 Renders a [Bootstrap DatePicker plugin](http://bootstrap-datepicker.readthedocs.org/en/release/).
@@ -18,12 +18,12 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require 2amigos/yii2-datepicker-widget:~1.0
+composer require 2amigos/yii2-date-picker-widget:~1.0
 ```
 or add
 
 ```json
-"2amigos/yii2-datepicker-widget" : "~1.0"
+"2amigos/yii2-date-picker-widget" : "~1.0"
 ```
 
 to the require section of your application's `composer.json` file.
