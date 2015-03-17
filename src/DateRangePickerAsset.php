@@ -18,7 +18,7 @@ use yii\web\AssetBundle;
  */
 class DateRangePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/2amigos/yii2-date-picker-widget/assets';
+    public $sourcePath = '@vendor/bower/bootstrap-datepicker/dist';
 
     public $css = [
         'css/daterangepicker.css'
@@ -28,4 +28,4 @@ class DateRangePickerAsset extends AssetBundle
         'dosamigos\datepicker\DatePickerAsset'
     ];
 
-} 
+}

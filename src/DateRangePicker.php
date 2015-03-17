@@ -61,7 +61,9 @@ class DateRangePicker extends InputWidget
     {
         parent::init();
         if ((!$this->hasModel() && $this->nameTo === null) || ($this->hasModel() && $this->attributeTo === null)) {
+            // @codeCoverageIgnoreStart
             throw new InvalidConfigException("Either 'nameTo', or 'model' and 'attributeTo' properties must be specified.");
+            // @codeCoverageIgnoreEnd
         }
         if ($this->size) {
             Html::addCssClass($this->options, 'input-' . $this->size);
@@ -122,31 +124,37 @@ class DateRangePicker extends InputWidget
     {
         $view = $this->getView();
 
+        // @codeCoverageIgnoreStart
         if($this->language !== null) {
             $this->clientOptions['language'] = $this->language;
             DateRangePickerAsset::register($view)->js[] = 'js/locales/bootstrap-datepicker.' . $this->language . '.js';
         } else {
             DateRangePickerAsset::register($view);
         }
+        // @codeCoverageIgnoreEnd
 
         $id = $this->options['id'];
         $selector = ";jQuery('#$id').parent()";
         if($this->form && $this->hasModel()) {
+            // @codeCoverageIgnoreStart
             $selector .= '.parent()';
             $class = "field-" . Html::getInputId($this->model, $this->attribute);
             $js[] = "$selector.closest('.$class').removeClass('$class');";
+            // @codeCoverageIgnoreEnd
         }
 
         $options = !empty($this->clientOptions) ? Json::encode($this->clientOptions) : '';
 
         $js[] = "$selector.datepicker($options);";
 
+        // @codeCoverageIgnoreStart
         if (!empty($this->clientEvents)) {
             foreach ($this->clientEvents as $event => $handler) {
                 $js[] = "$selector.on('$event', $handler);";
             }
         }
+        // @codeCoverageIgnoreEnd
         $view->registerJs(implode("\n", $js));
     }
 
-} 
+}
