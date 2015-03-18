@@ -31,8 +31,7 @@
         "bower-asset/bootstrap-datepicker": "1.4.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "4.*",
-        "scrutinizer/ocular": "~1.1"
+        "phpunit/phpunit": "4.*"
     },
     "autoload": {
         "psr-4": {
