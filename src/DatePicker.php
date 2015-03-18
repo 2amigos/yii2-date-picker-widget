@@ -86,6 +86,7 @@ class DatePicker extends InputWidget
      */
     public function registerClientScript()
     {
+        $js = [];
         $view = $this->getView();
 
         // @codeCoverageIgnoreStart
