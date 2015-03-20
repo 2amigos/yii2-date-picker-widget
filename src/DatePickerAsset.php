@@ -21,7 +21,7 @@ class DatePickerAsset extends AssetBundle
     public $sourcePath = '@vendor/bower/bootstrap-datepicker/dist';
 
     public $css = [
-        'css/datepicker.css'
+        'css/bootstrap-datepicker3.css'
     ];
 
     public $js = [

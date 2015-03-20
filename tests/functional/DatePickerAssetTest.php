@@ -20,6 +20,7 @@ class DatePickerAssetTest extends TestCase
         $this->assertContains('jquery.js', $content);
         $this->assertContains('bootstrap.js', $content);
         $this->assertContains('bootstrap-datepicker.js', $content);
+        $this->assertContains('bootstrap-datepicker3.css', $content);
 
     }
 }
