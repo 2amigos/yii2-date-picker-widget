@@ -10,7 +10,7 @@
  * @link http://www.2amigos.us/
  */
 
-namespace tests\data\overrides;
+namespace tests\overrides;
 
 
 use dosamigos\datepicker\DateRangePickerAsset;

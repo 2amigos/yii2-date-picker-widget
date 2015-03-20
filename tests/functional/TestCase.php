@@ -3,7 +3,6 @@
 namespace tests;
 
 use yii\helpers\ArrayHelper;
-use yii\web\AssetManager;
 use yii\web\View;
 
 /**
@@ -71,7 +70,8 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
                     'scriptUrl' => '/index.php',
                 ],
                 'assetManager' => [
-                    'basePath' => '@tests/data/assets',
+                    'class' => 'tests\AssetManager',
+                    'basePath' => '@tests/assets',
                     'baseUrl' => '/',
                 ]
             ]
@@ -100,7 +100,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
     {
         $view = new View();
         $view->setAssetManager(new AssetManager([
-            'basePath' => '@tests/data/assets',
+            'basePath' => '@tests/assets',
             'baseUrl' => '/',
         ]));
         return $view;

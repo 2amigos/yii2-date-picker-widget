@@ -1,5 +1,5 @@
 <?php
-namespace tests\data\overrides;
+namespace tests\overrides;
 
 use dosamigos\datepicker\DatePicker;
 use dosamigos\datepicker\DatePickerAsset;

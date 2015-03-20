@@ -2,10 +2,10 @@
 
 namespace tests;
 
-
+use Yii;
 use dosamigos\datepicker\DateRangePicker;
-use tests\data\models\Post;
-use tests\data\overrides\TestDateRangePicker;
+use tests\models\Post;
+use tests\overrides\TestDateRangePicker;
 use yii\bootstrap\ActiveForm;
 use yii\web\JsExpression;
 use yii\web\View;
@@ -67,7 +67,7 @@ class DateRangePickerTest extends TestCase
 
     public function testDateRangePickerRegisterPluginScriptMethod()
     {
-        $class = new \ReflectionClass('tests\\data\\overrides\\TestDateRangePicker');
+        $class = new \ReflectionClass('tests\\overrides\\TestDateRangePicker');
         $method = $class->getMethod('registerClientScript');
         $method->setAccessible(true);
 
@@ -97,5 +97,15 @@ class DateRangePickerTest extends TestCase
 ;jQuery('#post-date_from').parent().parent().on('changeDate', function(ev){console.log(ev);});
 JS;
         $this->assertEquals($test, $view->js[View::POS_READY]['test-daterangepicker-js']);
+    }
+
+    public function testWidget()
+    {
+        $model = new Post();
+        $view = Yii::$app->getView();
+        $content = $view->render('//daterangepicker-widget', ['model' => $model]);
+        $actual = $view->render('//layouts/main', ['content' => $content]);
+        $expected = file_get_contents(__DIR__ . '/data/test-daterangepicker-widget.bin');
+        $this->assertEquals($expected, $actual);
     }
 }

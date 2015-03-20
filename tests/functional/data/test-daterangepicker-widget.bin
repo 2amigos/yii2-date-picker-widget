@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/2/css/bootstrap.css" rel="stylesheet">
+<link href="/1/css/bootstrap-datepicker3.css" rel="stylesheet">
+<link href="/0/css/bootstrap-daterangepicker.css" rel="stylesheet"></head>
+<body>
+
+<div class="input-group input-daterange"><input type="text" id="post-date_from" class="form-control" name="Post[date_from]"><span class="input-group-addon">to</span><input type="text" id="post-date_to" class="form-control" name="Post[date_to]"></div><script src="/3/jquery.js"></script>
+<script src="/2/js/bootstrap.js"></script>
+<script src="/1/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">jQuery(document).ready(function () {
+;jQuery('#post-date_from').parent().datepicker();
+});</script></body>
+</html>

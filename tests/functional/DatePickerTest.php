@@ -4,10 +4,11 @@ namespace tests;
 
 
 use dosamigos\datepicker\DatePicker;
-use tests\data\models\Post;
-use tests\data\overrides\TestDatePicker;
+use tests\models\Post;
+use tests\overrides\TestDatePicker;
 use yii\web\JsExpression;
 use yii\web\View;
+use Yii;
 
 class DatePickerTest extends TestCase
 {
@@ -66,7 +67,7 @@ class DatePickerTest extends TestCase
 
     public function testDatePickerRegisterPluginScriptMethod()
     {
-        $class = new \ReflectionClass('tests\\data\\overrides\\TestDatePicker');
+        $class = new \ReflectionClass('tests\\overrides\\TestDatePicker');
         $method = $class->getMethod('registerClientScript');
         $method->setAccessible(true);
 
@@ -93,5 +94,15 @@ class DatePickerTest extends TestCase
 ;jQuery('#post-create_time').parent().on('changeDate', function(ev){console.log(ev);});
 JS;
         $this->assertEquals($test, $view->js[View::POS_READY]['test-datepicker-js']);
+    }
+
+    public function testWidget()
+    {
+        $model = new Post();
+        $view = Yii::$app->getView();
+        $content = $view->render('//datepicker-widget', ['model' => $model]);
+        $actual = $view->render('//layouts/main', ['content' => $content]);
+        $expected = file_get_contents(__DIR__ . '/data/test-datepicker-widget.bin');
+        $this->assertEquals($expected, $actual);
     }
 }

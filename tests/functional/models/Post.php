@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\data\models;
+namespace tests\models;
 
 
 use yii\db\ActiveRecord;
