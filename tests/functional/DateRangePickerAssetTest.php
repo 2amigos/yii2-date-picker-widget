@@ -2,7 +2,7 @@
 
 namespace tests;
 
-use dosamigos\datepicker\DateRangePickerAsset;
+use tests\data\overrides\TestDateRangePickerAsset;
 use yii\web\AssetBundle;
 
 class DateRangePickerAssetTest extends TestCase
@@ -11,14 +11,14 @@ class DateRangePickerAssetTest extends TestCase
     {
         $view = $this->getView();
         $this->assertEmpty($view->assetBundles);
-        DateRangePickerAsset::register($view);
+        TestDateRangePickerAsset::register($view);
         $this->assertEquals(5, count($view->assetBundles));
         $this->assertArrayHasKey('yii\\web\\JqueryAsset', $view->assetBundles);
-        $this->assertTrue($view->assetBundles['dosamigos\\datepicker\\DateRangePickerAsset'] instanceof AssetBundle);
+        $this->assertTrue($view->assetBundles['tests\\data\\overrides\\TestDateRangePickerAsset'] instanceof AssetBundle);
         $content = $view->renderFile('@tests/data/views/rawlayout.php');
         $this->assertContains('jquery.js', $content);
         $this->assertContains('bootstrap.js', $content);
-        $this->assertContains('daterangepicker.css', $content);
+        $this->assertContains('bootstrap-daterangepicker.css', $content);
 
     }
 }

@@ -16,7 +16,7 @@ class DateRangePickerTest extends TestCase
     public function testRenderWithModel()
     {
         $model = new Post();
-        $out = DateRangePicker::widget([
+        $out = TestDateRangePicker::widget([
             'form' => new ActiveForm(),
             'model' => $model,
             'attribute' => 'date_from',
@@ -33,7 +33,7 @@ class DateRangePickerTest extends TestCase
 
     public function testRenderWithNameAndValue()
     {
-        $out = DateRangePicker::widget([
+        $out = TestDateRangePicker::widget([
             'name' => 'name_from',
             'value' => '02-16-2015',
             'nameTo' => 'name_to',
@@ -47,7 +47,7 @@ class DateRangePickerTest extends TestCase
 
     public function testRenderWithSize()
     {
-        $out = DateRangePicker::widget([
+        $out = TestDateRangePicker::widget([
             'name' => 'name_from',
             'value' => '02-16-2015',
             'nameTo' => 'name_to',

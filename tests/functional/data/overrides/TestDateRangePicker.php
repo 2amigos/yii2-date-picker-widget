@@ -2,7 +2,6 @@
 namespace tests\data\overrides;
 
 use dosamigos\datepicker\DateRangePicker;
-use dosamigos\datepicker\DateRangePickerAsset;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\View;
@@ -19,9 +18,9 @@ class TestDateRangePicker extends DateRangePicker
 
         if($this->language !== null) {
             $this->clientOptions['language'] = $this->language;
-            DateRangePickerAsset::register($view)->js[] = 'js/locales/bootstrap-datepicker.' . $this->language . '.js';
+            TestDateRangePickerAsset::register($view)->js[] = 'js/locales/bootstrap-datepicker.' . $this->language . '.js';
         } else {
-            DateRangePickerAsset::register($view);
+            TestDateRangePickerAsset::register($view);
         }
 
         $id = $this->options['id'];
