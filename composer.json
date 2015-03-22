@@ -26,8 +26,8 @@
         "source": "https://github.com/2amigos/yii2-date-picker-widget"
     },
     "require": {
-        "yiisoft/yii2": "*",
-        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2": "~2.0.0",
+        "yiisoft/yii2-bootstrap": "~2.0.3",
         "bower-asset/bootstrap-datepicker": "1.4.0"
     },
     "require-dev": {
