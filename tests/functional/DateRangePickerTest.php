@@ -22,10 +22,10 @@ class DateRangePickerTest extends TestCase
             'attribute' => 'date_from',
             'attributeTo' => 'date_to'
         ]);
-        $expected = '<div class="input-group input-daterange"><div class="datepicker-range form-control field-post-date_from">
-<input type="text" id="post-date_from" class="form-control form-control datepicker-from" name="Post[date_from]"><p class="help-block help-block-error"></p>
-</div><span class="input-group-addon">to</span><div class="datepicker-range form-control field-post-date_to">
-<input type="text" id="post-date_to" class="form-control form-control datepicker-to" name="Post[date_to]"><p class="help-block help-block-error"></p>
+        $expected = '<div class="input-group input-daterange"><div class="input-group datepicker-range field-post-date_from">
+<input type="text" id="post-date_from" class="form-control datepicker-from" name="Post[date_from]"><p class="help-block help-block-error"></p>
+</div><span class="input-group-addon">to</span><div class="input-group datepicker-range field-post-date_to">
+<input type="text" id="post-date_to" class="form-control datepicker-to" name="Post[date_to]"><p class="help-block help-block-error"></p>
 </div></div>';
 
         $this->assertEqualsWithoutLE($expected, $out);

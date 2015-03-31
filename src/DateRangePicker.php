@@ -81,14 +81,14 @@ class DateRangePicker extends InputWidget
     public function run()
     {
         if ($this->form) {
-            Html::addCssClass($this->options, 'form-control datepicker-from');
-            Html::addCssClass($this->optionsTo, 'form-control datepicker-to');
+            Html::addCssClass($this->options, 'datepicker-from');
+            Html::addCssClass($this->optionsTo, 'datepicker-to');
             $inputFrom = $this->form->field(
                 $this->model,
                 $this->attribute,
                 [
                     'template' => '{input}{error}',
-                    'options' => ['class' => 'datepicker-range form-control'],
+                    'options' => ['class' => 'input-group datepicker-range'],
                 ]
             )->textInput($this->options);
             $inputTo = $this->form->field(
@@ -96,7 +96,7 @@ class DateRangePicker extends InputWidget
                 $this->attributeTo,
                 [
                     'template' => '{input}{error}',
-                    'options' => ['class' => 'datepicker-range form-control'],
+                    'options' => ['class' => 'input-group datepicker-range'],
                 ]
             )->textInput($this->optionsTo);
         } else {
