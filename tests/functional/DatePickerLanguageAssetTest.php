@@ -3,7 +3,7 @@
 namespace tests;
 
 
-use dosamigos\datepicker\DatePickerLanguageAsset;
+use tests\overrides\TestDatePickerLanguageAsset;
 use yii\web\AssetBundle;
 
 class DatePickerLanguageAssetTest extends TestCase
@@ -12,9 +12,9 @@ class DatePickerLanguageAssetTest extends TestCase
     {
         $view = $this->getView();
         $this->assertEmpty($view->assetBundles);
-        DatePickerLanguageAsset::register($view)->js[] = 'bootstrap-datepicker.es.min.js';
-        $this->assertEquals(5, count($view->assetBundles));
-        $this->assertTrue($view->assetBundles['dosamigos\\datepicker\\DatePickerLanguageAsset'] instanceof AssetBundle);
+        TestDatePickerLanguageAsset::register($view)->js[] = 'bootstrap-datepicker.es.min.js';
+        $this->assertEquals(6, count($view->assetBundles));
+        $this->assertTrue($view->assetBundles['tests\overrides\TestDatePickerLanguageAsset'] instanceof AssetBundle);
         $content = $view->render('//layouts/rawlayout.php');
         $this->assertContains('jquery.js', $content);
         $this->assertContains('bootstrap-datepicker.es.min.js', $content);

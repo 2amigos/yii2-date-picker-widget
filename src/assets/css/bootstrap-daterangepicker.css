@@ -24,3 +24,7 @@
     border-bottom-left-radius: 0 !important;
     text-align: left !important;
 }
+
+div.datepicker-range {
+    width: 100%;
+}
