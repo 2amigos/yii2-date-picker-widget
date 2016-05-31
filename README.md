@@ -145,7 +145,7 @@ I would recommend to have `phpunit` globally installed together with `xdebug` so
 
 Further Information
 -------------------
-Please, check the [Bootstrap DatePicker site](http://bootstrap-datepicker.readthedocs.org/en/release/) documentation for further information about its configuration options. 
+Please, check the [Bootstrap DatePicker site](http://bootstrap-datepicker.readthedocs.io/en/latest/) documentation for further information about its configuration options. 
 
 Contributing
 ------------
