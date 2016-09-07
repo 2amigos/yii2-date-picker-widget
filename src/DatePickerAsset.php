@@ -18,7 +18,7 @@ use yii\web\AssetBundle;
  */
 class DatePickerAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/bootstrap-datepicker/dist';
+    public $sourcePath = '@bower/bootstrap-datepicker/dist';
 
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset'
