@@ -50,7 +50,7 @@ class DateRangePicker extends InputWidget
     /**
      * @var string the template to render. Used internally.
      */
-    private $_template = '{inputFrom}<span class="input-group-addon">{labelTo}</span>{inputTo}';
+    protected $_template = '{inputFrom}<span class="input-group-addon">{labelTo}</span>{inputTo}';
 
 
     /**
