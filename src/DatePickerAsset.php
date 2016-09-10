@@ -20,12 +20,15 @@ class DatePickerAsset extends AssetBundle
 {
     public $sourcePath = '@bower/bootstrap-datepicker/dist';
 
+    public $css = [
+        'css/bootstrap-datepicker3.css',
+    ];
+
+    public $js = [
+        'js/bootstrap-datepicker.js'
+    ];
+
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset'
     ];
-
-    public function init() {
-        $this->css[] = YII_DEBUG ? 'css/bootstrap-datepicker3.css' : 'css/bootstrap-datepicker3.min.css';
-        $this->js[] = YII_DEBUG ? 'js/bootstrap-datepicker.js' : 'js/bootstrap-datepicker.min.js';
-    }
 }
