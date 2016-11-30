@@ -9,7 +9,7 @@ Bootstrap DatePicker Widget for Yii2
 [![Total Downloads](https://img.shields.io/packagist/dt/2amigos/yii2-date-picker-widget.svg?style=flat-square)](https://packagist.org/packages/2amigos/yii2-date-picker-widget)
 
 
-Renders a [Bootstrap DatePicker plugin](http://bootstrap-datepicker.readthedocs.org/en/release/).
+Renders a [Bootstrap DatePicker plugin](https://bootstrap-datepicker.readthedocs.io/en/stable/).
 
 Installation
 ------------
