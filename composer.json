@@ -28,7 +28,7 @@
     "require": {
         "yiisoft/yii2": ">=2.0.9",
         "yiisoft/yii2-bootstrap": "*",
-        "bower-asset/bootstrap-datepicker": "1.4.0"
+        "bower-asset/bootstrap-datepicker": "1.7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*"
